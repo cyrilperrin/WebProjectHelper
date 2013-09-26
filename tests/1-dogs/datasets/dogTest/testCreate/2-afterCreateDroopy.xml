@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<dataset>
+    <table name="dog">
+        <column>name</column>
+        <row><value>Bill</value></row>
+        <row><value>Droopy</value></row>
+    </table>
+</dataset>

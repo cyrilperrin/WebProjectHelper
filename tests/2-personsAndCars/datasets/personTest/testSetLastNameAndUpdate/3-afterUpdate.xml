@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<dataset>
+    <table name="person">
+        <column>firstname</column>
+        <column>lastname</column>
+        <row>
+        	<value>James</value>
+        	<value>Bond3</value>
+        </row>
+        <row>
+        	<value>David</value>
+        	<value>Starsky3</value>
+        </row>
+        <row>
+        	<value>Kenneth</value>
+        	<value>Hutchinson3</value>
+        </row>
+    </table>
+</dataset>

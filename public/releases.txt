@@ -1,0 +1,45 @@
+[(major release).(minor release).(bugfix)]
+
+1.6.1 :
+- improve memory usage in fetch() method
+- correct a bug in fetch() method for date/datetime fields
+
+1.6.0 :
+- add "Prefix for PHP classes" option
+- correct a bug in MySQL CREATE script for association tables
+
+1.5.1 :
+- correct a bug on generation options
+
+1.5.0 :
+- use MVC library
+
+1.4.2 :
+- correct a bug in update() method
+
+1.4.1 :
+- correct a bug on "Put fieldnames into base PHP classes" and "Generate only base PHP classes" options 
+
+1.4.0 :
+- add "Put fieldnames into base PHP classes" option
+- add "Generate only base PHP classes" option
+
+1.2.0 :
+- add a fetchAll() method
+
+1.1.0 :
+- call _select() method from selectBy*() methods
+- correct a bug in load() method 
+
+1.0.6 :
+- add missing space character before WHERE instruction in _select() method
+- correct spelling mistakes in french traduction
+
+1.0.4 :
+- correct a bug in delete() method
+- correct DECIMAL type in MySQL script
+- correct getter name for generated id
+- customizable fieldnames
+
+1.0.0 :
+- final release

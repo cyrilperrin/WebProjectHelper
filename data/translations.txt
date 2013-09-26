@@ -1,0 +1,235 @@
+en	fr	es
+PHP classes and MySQL structure generator	Générateur de classes PHP et de structure MySQL	Generador de clases PHP y MySQL estructura
+Build the MySQL structure and the PHP code of your UML classes in a few clicks!	Générez la structure MySQL et le code PHP de vos classes UML en quelques clics !	Construir la estructura de MySQL y el código PHP de tus clases UML de en unos pocos clics!	
+Feedback on WebProjectHelper	Impressions sur WebProjetHelper	Comentarios sobre WebProjectHelper
+Feedback me	Vos impressions	Sus impresiones
+Portfolio
+Get the (.*?)'s id	Récupérer le/les id(s) du/de la $1	Recuperar el/la id de $1
+Array	Tableau	Tabla
+Define	Définir	Definir
+Generate	Générer	Generar
+Result	Résultat	Resultado
+Puts elements definitions here \.\.\.	Placez les définitions ici ...	Ponga aquí las definiciones ...
+Product zip file for MySQL scripts	Produire un fichier zip pour les scripts MySQL	Producir un archivo zip para scripts de MySQL
+Product zip file for PHP classes	Produire un fichier zip pour les classes PHP	Producir un archivo zip para las clases de PHP
+Already (.*?) generations !	Déjà $1 générations	Ya $1 generación
+Syntaxe	Syntaxe	Sintaxis
+Objects and their elements	Les objets et leurs éléments	Los objetos y sus componentes
+A simple object	Un simple objet	Un objeto simple
+Examples	Exemples	Ejemplos
+Type can be	Le type peut être	El tipo puede ser
+Multiplicities	Les multiplicités	Multiplicidades
+Several	Plusieurs	Varios
+One or zero	Un ou zéro	Uno o cero
+Multiplicity can be apply with scalars too	Les multiplicités peuvent aussi s'appliquer aux scalaires	Las multiplicidades puede aplicarse también a escalar
+Inheritance	Héritage	Legado
+List of elements	Liste d'éléments	Lista de elementos
+Example	Exemple	Ejemplo
+Definitions	Définitions	Definiciones
+Using the generated code	Utilisation du code généré	Usando el código generado
+Tool developed by	Outil développé par	Aplicación desarrollada por
+Car	Voiture	Vehículo
+MySQL script	Script MySQL	MySQL script
+PHP class	Classe PHP	Clase PHP
+MySQL scripts	Scripts MySQL	MySQL scripts
+PHP classes	Classes PHP	Clases PHP
+The object (.*?) inherites the object (.*?) already in family, this may be problematic \.\.\.	L'objet $1 hérite de l'objet $2 qui est déjà dans la famille, ceci peut être problématique ...	El objeto $1 hereda del objeto $2, ya esta en la familia, esto puede ser problemático ...
+The object (.*?) owns a member of its family (.*?) without association	L'objet $1 possède un membre de sa famille $2 sans association	Objeto $1 tiene un miembro de la familia $2, sin asociación
+The object (.*?) owns itself without association	L'objet $1 se possède lui-même sans association	El objeto $1 en sí mismo no tiene ninguna asociación
+The object (.*?) has itself for id	L'objet $1 a lui-même comme id	El objeto $1 en sí tiene como id
+The object (.*?) inherite an object and owns an id	L'objet $1 hérite d'un objet et possède un id	El objeto $1 hereda un objeto y tiene un identificador
+The object (.*?) inherites the inexisting object (.*?), please define it	L'objet $1 hérite d'un objet inexistant $2, définissez-le	El objeto $1 hereda un objeto inexistente $2, definir el
+The object (.*?) owns a member of its family (.*?) as id	L'objet $1 a un membre de la famille $2 comme id	Objeto $1 tiene un miembro de la familia $2 como id
+The object (.*?) owns the same object (.*?) several times without association	L'objet $1 possède le même objet $2 plusieurs fois sans association	El objeto $1 tiene el mismo objeto $2 varias veces, sin asociación
+The object (.*?) owns the same object (.*?) several times with the same association	L'objet $1 possède le même objet plusieurs fois avec la même association	El objeto $1 tiene el mismo objeto varias veces con la misma asociación
+The object (.*?) owns the object (.*?) with the association (.*?) and it causes a name conflict	L'objet $1 possède l'objet $2 avec l'association $3 et cela cause un conflit de noms	El objeto $1 tiene el objeto $2 con la asociación $3 y esto provoca un conflicto de nombres
+The object (.*?) owns the object (.*?) and it causes a name conflict	L'objet $1 possède l'objet $2 et cela cause un conflit de noms	El objeto $1 tiene el objeto $2 y esto provoca un conflicto de nombres
+The object (.*?) owns the object (.*?) already owned by family without association	L'objet $1 possède l'objet $2 déjà possédé par sa famille sans association	El objeto $1 tiene el objeto $2 que perteneció a su familia, sin asociación
+The object (.*?) owns the object (.*?) with the association (.*?) and it causes a name conflict in family	L'objet $1 possède l'objet $2 avec l'association $3 et cela cause un conflit de noms dans sa famille
+The object (.*?) owns the object (.*?) and it causes a name conflict in family	L'objet $1 possède l'objet $2 et cela cause un conflit de noms dans sa famille	El objeto $1 tiene el objeto $2 con la asociación $3 y esto provoca un conflicto de nombres en su familia
+The object (.*?) owns the inexisting object (.*?), please define it	L'objet $1 possède un objet inexistant $2, définissez-le	El objeto $1 tiene el objeto $2 no existe, definir el
+The object (.*?) owns the object (.*?) with an association named as a reserved word (.*?)	L'objet $1 possède l'objet $2 avec une association nommée comme le mot réservé $3	El objeto $1 tiene el objeto $2 con una asociación denominada como la palabra reservada $3
+The object (.*?) owns the same object (.*?) several times without correspondence association	L'objet $1 possède le même objet $2 plusieurs fois sans correspondance d'association	El objeto $1 tiene el mismo objeto $2 varias veces sin correspondencia asociación
+Syntaxe error	Erreur de syntaxe	Error de sintaxis
+The association correspondence (.*?) is defined more than twice	La correspondance d'association $1 a été définie plus que deux fois	Correspondencia asociación $1 se ha definido más de dos veces
+There is a correspondence problem with the association (.*?)	Il y a un problème de correspondance avec l'association $1	Hay un problema de correspondencia con la asociación $1
+Delete associated (.*?)s	Supprimer les $1s associé(e)s
+Delete associated (.*?)	Supprimer le/la $1 associé(e)
+(.*?)'s ids	Ids de $1	$1 ids
+Require class files	Chargement des classes PHP	Cargando clases PHP
+Save values	Sauvegarder les valeurs	Guardar valores
+(.*?)'s id	Id de $1	$1 id
+Select query	Requête de sélection
+Reload data	Recharger les données	Actualizar los datos
+Reload data from database	Recharger les données depuis la base de données	Actualizar los datos de la base de datos
+The name (.*?) for an element is not permitted	Le nom $1 pour un élément n'est pas permis	El nombre $1 de un elemento no está permitido
+The use of (.*?) and (.*?) in the elements names is not recommended	L'usage de $1 et $2 n'est pas recommandé pour les noms d'éléments	El uso de $1 y $2 no está recomendado para los nombres de elementos
+Get the (.*?)	Récupérer le/la $1	Recuperar el/la $1
+Set the (.*?) by id	Définir le/la $1 d'après son/ses id(s)	Definir el/la id de $1
+Set the (.*?)	Définir le/la $1	Definir el/la $1
+Return null if necessary	Retourner null si nécessaire	Volver null si es necesario
+Load and return (.*?)	Charger et retourner $1	Carga y volder $1
+Save into object	Sauvegarder dans l'objet	Guardar en el objeto
+Save into database	Sauvegarder dans la base de données	Guardar en la base de datos
+Successful operation \?	Opération réussie ?	La operación se realiza correctamente ?
+Remove a (.*?) by id	Retirer un(e) $1 d'après son/ses id(s)	Eliminar uno/una $1 por id
+Remove a list of (.*?)	Retirer une liste de $1	Eliminar una lista de $1
+Remove a (.*?)	Retirer un(e) $1	Eliminar uno/una $1
+Remove all (.*?)	Retirer tous/toutes les $1	Eliminar todo los/las $1
+Select (.*?) by (.*?)	Sélectionner les $1 par $2	Seleccionar los/las $1 por $2
+Select all (.*?)	Sélectionner tous/toutes les $1	Seleccionar todo los/las $1
+Select for the iterator implementation	Jeu de résultat pour l'implémentation de Iterator	Lista para la aplicación de Iterator
+Select (.*?)	Sélectionner les $1	Seleccionar los/las $1
+The object (.*?) is defined several times	L'objet $1 est défini plusieurs fois	El objetivo $1 es definido dos veces
+There is an id loop (.*?), this may be problematic  \.\.\.	Il y a une boucle d'ids $1, ceci peut être problématique ...	Hay un lazo ids $1, esto puede ser problemático ...
+Construct the (.*?)	Construire le/la $1	Construir el/la $1
+Construct a (.*?)	Construire un(e) $1	Construir uno/una $1
+Save pdo	Sauvegarder pdo	Guardar pdo
+The name (.*?) for a scalar is not permitted	Le nom $1 pour un scalaire n'est pas permis	El nombre $1 de un escalar no está permitido
+The name (.*?) for an object is not permitted	Le nom $1 pour un objet n'est pas permis	El nombre $1 de un objecto no está permitido
+Call parent constructor	Appeler le constructeur du parent	Al llamar al constructor del padre
+(.*?)\/(.*?)\/(.*?) \((.*?)\/(.*?)\/(.*?)\)	$2/$1/$3 ($5/$4/$6)	$2/$1/$3 ($5/$4/$6)
+Create a (.*?)	Créer un(e) $1	Construir uno/una $1
+Load a (.*?) by its (.*?)	Charger un(e) $1 d'après son $2	Carga uno/una $1 de su $2
+Load a (.*?)	Charger un(e) $1	Carga uno/una $1
+Count (.*?)	Compter les $1	Contar las/los $1
+Number of affected rows	Nombre de lignes affectées	Número de filas afectadas
+Number of (.*?)	Nombre de $1	Número de $1
+Load all (.*?)	Charger tous/toutes les $1	Carga todo los/las $1
+Array of (.*?) for the iterator implementation	Tableau de $1 pour l'implémentation de Iterator	Tabla de $1 para la aplicación de Iterator
+Array of (.*?)	Tableau de $1	Tabla de $1
+Fetch the next (.*?) from a result set	Récupèrer le/la $1 suivant(e) d'un jeu de résultats	Recuperar el/la $1 siguiente de una lista
+Fetch all the (.*?) from a result set	Récupèrer tous/toutes les $1 d'un jeu de résultats	Recuperar todos los/las $1 de una lista
+Fetch all the (.*?)	Récupèrer tous/toutes les $1	Recuperar todos los/las $1
+Equality test	Test d'égalité	Prueba de la igualdad
+Delete (.*?)	Supprimer le/la $1	Eliminar el/la $1
+ToString	
+String representation of (.*?)	Représentation de $1 sous la forme d'un string	$1 representación como una cadena
+Add (.*?) to array	Ajouter les $1 dans le tableau	Añadir los/las $1 en la tabla
+Add the (.*?) into database	Ajouter le/la $1 dans la base de données	Añadir el/la $1 en el base de datos
+Add (.*?) into database	Ajouter un(e) $1 dans la base de données	Añadir uno/una $1 en el base de datos
+Add a list of (.*?)	Ajouter une liste de $1	Añadir una lista de $1
+Add a (.*?) by id	Ajouter un(e) $1 d'après son/ses id(s)	Añadir uno/una $1 por id
+Add a (.*?)	Ajouter un(e) $1	Añadir uno/una $1
+Error while inserting a (.*?) into database	Erreur durant l'insertion d'un(e) $1 dans la base de données	Error al insertar uno/una $1 en la base de datos
+Error while reloading data of a (.*?) from database	Erreur durant le rechargement des données d'un(e) $1 depuis la base de données	Error en los datos de recarga de un $1 de la base de datos
+Create parent	Construire le parent	Construcción del pariente
+Return array	Retourner le tableau	Volver tabla
+Return the serialized \(or not\) (.*?)	Retourner la sérialisation (ou pas) du/de la $1	Volver la serialización (o no) del/de la $1
+Return (.*?)	Retourner $1	Volver $1
+Current element for the iterator implementation	Élément courant pour l'implémentation de Iterator	Elemento actual para la aplicación de Iterator
+Error while counting (.*?) in database	Erreur lors du comptage des $1 dans la base de données	Error contar los/las $1 en la base de datos
+There is an "one multiplicity" loop (.*?), there is no possibility to create an object in this way \.\.\.	Il y a une boucle de multiplicité une $1, il sera impossible de créer un objet ainsi ...	Hay un lazo de una multiplicidad una AABB, será imposible crear un objeto, así ...
+No well formed definition has been found	Aucune définition bien formée n'a été trouvée	No existe una definición se encontró bien formados
+Prepare and execute query	Préparer et exécuter la requête	Preparar y ejecutar la consulta
+Error while loading a (.*?) by its (.*?) from database	Erreur lors du chargement d'un(e) $1 d'après son $2 depuis la base de données	Error al cargar uno/una $1 de su $2 de la base de datos
+Error while loading a (.*?) from database	Erreur lors du chargement d'un(e) $1 depuis la base de données	Error al cargar uno/una $1 de la base de datos
+Fetch the (.*?) from result set	Récupérer le/la $1 depuis le jeu de résultats	Recuperar uno/una $1 en la lista
+Array for lazy load	Tableau pour le chargement fainéant	Tabla para carga rápida
+Objects are equals \?	Les objets sont-ils égaux ?	Los objetos son iguales?
+Test if null	Test si null	Prueba si null
+Test class	Tester la classe	Prueba clase
+Test ids	Tester les ids	Prueba ids
+Extract values	Extraire les valeurs	Extracción de valores
+Construct the (.*?)	Construire le/la $1	Construir lo/la $1
+Key of current element for the iterator implementation	Clef de l'élément courant pour l'implémentation de Iterator	La clave del elemento actual para la aplicación de Iterator
+Iterator implementation	Implémentation de Iterator	Aplicación Iterator
+The object (.*?) owns the abstract object (.*?) as a list, sorry but it's unsupported \.\.\.	L'objet $1 possède l'objet abstrait $2 en tant que liste, désolé ceci n'est pas supporté ...	El objeto $1 tiene el objeto $2 abstracto como una lista, lo siento que no es compatible ...
+The object (.*?) owns the object (.*?) without explicit association correspondance	L'objet $1 possède l'objet $2 sans correspondance d'association explicite	El objeto $1 tiene el objeto $2 sin correspondencia explícita Asociación
+Error while updating a (.*?)\\'s field in database	Erreur lors de la mise à jour d'un champ d'un(e) $1 dans la base de données	
+Error while loading all (.*?) from database	Erreur lors du chargement de tous/toutes les $1 depuis la base de données	Error al cargar algunos o todos los/las $1 desde la base de datos
+Error while deleting a list of (.*?)\\'s (.*?) in database	Erreur lors de la suppression d'une liste de $2 d'un(e) $1 dans la base de données	Error al eliminar una lista de $2 de uno/una $1 en la base de datos
+Error while deleting a (.*?)\\'s (.*?) in database	Erreur lors de la suppression d'un(e) $2 d'un(e) $1 dans la base de données	Error al eliminar uno/una $2 de uno/una $1 en la base de datos
+Error while deleting all (.*?)\\'s (.*?) in database	Erreur lors de la suppression de tous/toutes les $2 d'un(e) $1 dans la base de données	Error al eliminar todos $2 de uno/una $1 en la base de datos
+Error while deleting a (.*?) in database	Erreur lors de la suppression d'un(e) $1 dans la base de données	Error al eliminar uno/una $1 en la base de datos
+Error while updating all (.*?)\\'s fields in database	Erreur lors de la mise à jour de tous les champs du/de la $1	Error al actualizar todos los campos del $1
+Error while updating (.*?)\\'s (.*?) in database	Erreur lors de la mise à jour du/de la $2 d'un(e) $1 dans la base de données	Error al actualizar el/la $2 de uno/una $1 en la base de datos
+Error while adding a list of (.*?)\\'s (.*?) in database	Erreur lors de l'ajout d'une liste de $2 à un(e) $1 dans la base de données	Error al añadir una lista de $2 a uno/una $1 en la base de datos
+Error while adding a (.*?)\\'s (.*?) in database	Erreur lors de l'ajout d'un(e) $2 à un(e) $1 dans la base de données	Error al añadir uno/una $2 a uno/una $1 en la base de datos
+Error while selecting all (.*?) by (.*?) in database	Erreur lors du chargement de tous/toutes les $1 d'un(e) $2 depuis la base de données	Error al cargar algunos o todos los/las $1 por $2 de la base de datos
+Error while selecting (.*?)\\'s (.*?) in database	Erreur lors du chargement des $2 d'un(e) $1 depuis la base de données	Error al cargar $2 de uno/una $1 desde la base de datos
+Load the (.*?)	Charger le/la $1	Carga el/la $1
+Load (.*?)	Charger les $1	Carga los/las $1
+Init array	Initialiser le tableau	Iniciar la tabla
+Save attributes	Sauvegarder les attributs	Guardar atributos
+Elements	Éléments	Elementos
+Scalars	Scalaires	Escalars
+Int and string types can be limited, example :	Les types int et string peuvent être limités, exemple :	Los tipos int y string puede ser limitado, por ejemplo:
+Objects	Objets	Objetos
+Possession	Possession	Posesión
+Objects can possess elements	Les objets peuvent posséder des éléments	Los objetos pueden tener elementos
+Description and default value are optional	La description et la valeur par défaut sont optionnelles	La descripción y el valor predeterminado son opcionales
+Description is optional	La description est optionnelle	La descripción es opcional
+Limitation of int and string types	Limitation des types int et string	La limitación del tipo int y string
+Simple	Simple	Simple
+Advanced	Avancé	Avanzado
+One and only one	Un et un seul	Uno y sólo uno
+Special Features	Fonctionnalités spéciales	Características especiales
+Id	Identifiant	Id
+Even an object can become an id	Même un objet peut devenir un id	Incluso un objeto puede convertirse en un id
+Associations	Associations	Asociaciones
+Reflexive	Réflexive	Reflexivo
+It can be applied with scalars too	Ceci peut également s'appliquer aux scalaires	Esto también puede aplicarse a escalar
+The number identify a link between two associations	Le numéro identifie un lien entre deux associations	El número identifica una relación entre dos asociaciones
+You can copy\/paste this script to test generator tool	Vous pouvez copier/coller ce script pour tester le générateur	Usted puede copiar y pegar este script para probar el generador
+Connection to the database	Connexion à la base de données	Conexión a la base de datos
+Creation of two members	Création de deux membres	Creación de dos miembros
+Loading and display of all members	Chargement et affichage de tous les membres	Cargando y mostrando todos los miembros
+Creation of a message	Création d'un message	Crear un mensaje
+Creation of a question and an answer	Création d'une question et d'une réponse	Creación de una pregunta y la respuesta
+Loading and diplay of all answers of the question	Chargement et affichage de toutes les réponses de la question	Cargar y mostrar todas las respuestas a la pregunta
+Objects will be usable with foreach	Les objets seront utilisables dans un foreach	Los artículos serán utilizables en un foreach
+Creation of a person	Création d'une personne	Aplicación conjunta
+Creation of cars	Création de voitures	Diseño de coches
+Associate cars to the person	Associer les voitures à la personne	Involucrar a la persona coches
+Loading and diplay of all cars of the person	Chargement et affichage de toutes les voitures de la personne	Cargando y mostrando todos los coches de la persona
+m\/d\/Y	d/m/Y	d/m/Y
+Enable lazy load \?	Activer le chargement fainéant ?	Habilitar carga rápida?
+Already loaded \?	Déjà chargé(e) ?	Ya cargada?
+Save for lazy load	Sauvegarder pour le chargement fainéant	Guardar para la carga rápida
+The object (.*?) owns a time scalar as an id, sorry but it's not supported	L'objet $1 possède un scalaire de temps en tant qu'id, désolé mais cela n'est pas supporté	El objeto tiene un tiempo de 1 dólar como la identificación de escalar, lo siento pero este no es compatible
+MYSQL datatables prefix	Préfixe pour les tables MySQL	Prefijo para las tablas MySQL
+PHP classes prefix	Préfixe pour les classes PHP	Prefijo para las clases PHP
+PHP files prefix	Préfixe pour les fichiers PHP	Prefijo para archivos PHP
+The object (.*?) owns the object (.*?) with an association correspondence pointing to nothing	L'objet $1 possède l'objet $2 avec une correspondance d'association pointant sur rien	El objeto $1 tiene el objeto $2 con una asociación de juego que apunta a nada
+Correspondence	Correspondance	Correspondencia
+Select query	Requête de sélection	Consulta de selección
+Associated elements	Éléments associés	Los componentes asociados
+Share	Partager	Compartir
+Execute update query \?	Exécuter la requête update ?	Ejecutar consulta update ?
+Don't execute udpate query if necessary	Ne pas exécuter la requête update si nécessaire	No ejecute la consulta update si es necesario
+Update all fields in database	Mettre à jour tous les champs dans la base de données	Actualizar todos los campos en la base de datos
+Update all (.*?)\\'s fields in database	Mettre à jour tous les champs du/de la $1 dans la base de données	Actualizar todos los campos del $1 en la base de datos
+Update parent	Mettre à jour le parent	Actualización del padre
+Help	Aide	Ayuda
+Download	Télécharger	Descargar
+For more examples and explanations, go to (.*?)help page(.*?)	Pour plus d'exemples et d'explications, rendez-vous sur la $1page d'aide$2	Para más ejemplos y explicaciones, por favor visite la $1página de ayuda$2
+Persons and cars	Personnes et voitures	Personas y coches
+Class diagram	Diagramme des classes	Diagrama de clases
+Members, messages and posts	Membres, messages et posts	Miembros, mensajes y posts
+To connect you to your database with PDO, use the following code	Pour vous connecter à votre base de données avec PDO, utilisez le code suivant	Para conectarse a su base de datos con PDO, utilice el código siguiente
+Update a field in database	Mettre à jour un champ dans la base de données
+Prepare update	Préparer la mise à jour
+Update field	Mettre à jour le champ
+Save into database \(or not\)	Sauvegarder dans la base de données (ou pas)
+Serialize	Sérialiser	Serializar
+Serialization of (.*?)	Sérialisation du/de la $1	Serialización del/de la $1
+Unserialize string	Désérialiser la chaine de caractères	Deserializar la cadena
+Unserialize	Désérialiser	Deserializar
+Enable serialize \?	Activer la sérialisation ?	Habilitar la serialización?
+Serialize the (.*?)	Sérialiser le/la $1	Serializar el/la $1
+Additional default value for date and datetime scalars	Valeur par défaut additionnelle pour les scalaires date et datetime	Valor por defecto adicionales para date y datetime escalares
+Classic	Classique	Clásico
+The object (.*?) cannot be a list of two objects, (.*?) and (.*?), at the same time	L'objet $1 ne pas être une liste de deux objets, $2 et $3, à la fois	El objeto $1 no puede ser una lista de dos objetos, $2 y $3, al mismo tiempo
+Fields name	Nom des champs	Nombres de campo
+Table name	Nom de la table	Nombre de la tabla
+Put your code here	Placez votre code ici	
+Association class between (.*?) and (.*?)	Classe d'association entre $1 et $2	
+Project hosted by	Projet hébergé sur	Proyecto patrocinado por
+Dog	Chien	Perro
+Put fieldnames into base PHP classes	Placer les champs dans les classes PHP de base	Ponga los campos en las básico clases de PHP
+Generate only base PHP classes	Générer uniquement les classes PHP de base	Sólo generar básico clases de PHP
+Remove from lazy load array	Supprimer du tableau pour le chargement fainéant	Eliminar de la tabla para carga rápida
+Check if the (.*?) exists in database	Vérifier que le/la $1 existe en base de données	Compruebe que el/la $1 está en la base de datos
+The (.*?) exists in database \?	Le/La $1 existe en base de données ?	El/La $1 está en la base de datos
+Error while checking that a (.*?) exists in database	Erreur lors de la vérification qu'un(e) $1 existe dans la base de données	Error al comprobar que un/una $1 está en la base de datos

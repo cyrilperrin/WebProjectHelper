@@ -1,0 +1,10 @@
+------------------------------ 29/08/2012 ------------------------------
+(s)[member: |login,string/20|, |isAdmin,bool,,false|, |password,string/41|, *{sent,1}message, *{received,2}message]
+(s)[message: {sender,1}member, {recipient,2}member, |title,string/20|, |date,datetime|, |content,string|]
+[post: member, |title,string/20|, |date,datetime|, |content,string|]
+(s)[post<-question: *answer]
+(s)[post<-answer: question] 
+------------------------------ 26/09/2013 ------------------------------
+[a]
+------------------------------ 26/09/2013 ------------------------------
+[a]

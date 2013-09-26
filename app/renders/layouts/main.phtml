@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="<?php echo Application::getService('translation')->language(); ?>">
+	<head>
+		<!-- Meta tags -->
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="description" content="<?php echo tr('PHP classes and MySQL structure generator'); ?>" />
+		
+		<!-- Title -->
+		<title>WebProjectHelper - <?php echo tr('PHP classes and MySQL structure generator'); ?></title>
+		
+		<!-- Favicon -->
+		<link href="<?php echo Request::getBase(); ?>media/favicon.png" rel="shortcut icon" type="image/x-icon" />
+		
+		<!-- Stylesheets -->
+		<link type="text/css" rel="stylesheet" href="<?php echo Request::getBase(); ?>css/main.css" />
+		<link type="text/css" rel="stylesheet" href="<?php echo Request::getBase(); ?>css/buttons.css" />
+		<link type="text/css" rel="stylesheet" href="<?php echo Request::getBase(); ?>css/messages.css" />
+		
+		<!-- JavaScript libraries -->
+		<script type="text/javascript" src="<?php echo Request::getBase(); ?>js/jquery.js"></script>
+		<script type="text/javascript" src="<?php echo Request::getBase(); ?>js/jquery.corner.js"></script>
+		<script type="text/javascript" src="<?php echo Request::getBase(); ?>js/jquery.clearfield.js"></script>
+		<script type="text/javascript" src="<?php echo Request::getBase(); ?>js/jquery.autocolumn.js"></script>
+		
+		<!-- SyntaxHighlighter -->
+		<script type="text/javascript" src="<?php echo Request::getBase(); ?>js/syntaxhighlighter/scripts/shCore.js"></script>
+		<script type="text/javascript" src="<?php echo Request::getBase(); ?>js/syntaxhighlighter/scripts/shBrushPhp.js"></script>
+		<link type="text/css" rel="stylesheet" href="<?php echo Request::getBase(); ?>js/syntaxhighlighter/styles/shCore.css"/>
+		<link type="text/css" rel="stylesheet" href="<?php echo Request::getBase(); ?>js/syntaxhighlighter/styles/shThemePerso.css"/>
+		<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = '<?php echo Request::getBase(); ?>js/syntaxhighlighter/scripts/clipboard.swf'; SyntaxHighlighter.all();</script>
+		
+		<!-- Main JavaScript script -->
+		<script type="text/javascript" src="<?php echo Request::getBase(); ?>js/main.js"></script>
+	</head>
+	<body>
+		<!-- Page -->
+		<div id="page">
+			<!-- Header -->
+			<div id="header">
+				<div id="title" onclick="window.location='<?php echo Request::getBase(); ?>';">
+					<h1>WebProjectHelper</h1>
+				</div>
+			</div>
+			<!-- Menu -->
+			<ul id="menu">
+				<li id="language" class="<?php echo Application::getService('translation')->language(); ?>">
+					<select onchange="window.location.href = '<?php echo Request::buildURL(null,'index','language',array('language' => '-language')); ?>'.replace('-language',$(this).val());">
+						<option value="fr" <?php if (Application::getService('translation')->language() == 'fr') echo 'selected="selected"'; ?>>Français</option>
+						<option value="en" <?php if (Application::getService('translation')->language() == 'en') echo 'selected="selected"'; ?>>English</option>
+						<option value="es" <?php if (Application::getService('translation')->language() == 'es') echo 'selected="selected"'; ?>>Español</option>
+					</select>
+				</li>
+				<li><a href="mailto:<?php $conf = Application::getService('conf'); echo $conf['MISC']['EMAIL']; ?>"><?php echo tr('Feedback me'); ?></a></li>
+				<li><a href="<?php echo Request::buildURL(null,'index','help')?>"><?php echo tr('Help'); ?></a></li>
+				<li><a href="https://webprojecthelper.googlecode.com/files/WebProjectHelper-<?php echo RELEASE; ?>.zip"><?php echo tr('Download'); ?></a></li>
+			</ul>
+			
+			<!-- Content -->
+			<?php echo $this->content; ?>
+				
+			<!-- Footer -->
+			<div id="footer">
+				<p><?php echo tr('Tool developed by'); ?> <a href="http://www.cyrilperrin.fr/">Cyril Perrin</a></p>
+				<p><?php echo tr('Project hosted by'); ?> <a href="https://github.com/cyrilperrin/webprojecthelper">GitHub</a></p>
+				<p><a href="<?php echo Request::getBase(); ?>releases.txt" title="Releases notes">v<?php echo RELEASE; ?></a></p>
+				<img src="<?php echo Request::getBase(); ?>media/farm/32x32/html_valid.png" alt="HTML valid" />
+				<img src="<?php echo Request::getBase(); ?>media/farm/32x32/css_valid.png" alt="CSS valid" />
+				<div id="credits">
+					Icons : <a href="http://www.fatcow.com">Farm</a>, <a href="http://www.icondrawer.com">Flags</a><br/>
+					JS librairies :
+						<a href="http://jquery.com/">jQuery</a>,
+						<a href="http://welcome.totheinter.net/columnizer-jquery-plugin/">Columnizer</a>,
+						<a href="http://labs.thesedays.com/projects/jquery/clearfield/">ClearField</a>,
+						<a href="http://www.malsup.com/jquery/corner/">Corner</a>,
+						<a href="http://alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a><br/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

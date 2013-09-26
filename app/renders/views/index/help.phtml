@@ -1,0 +1,99 @@
+<div id="help">
+	<h2><?php echo tr('Examples'); ?></h2>
+	
+	<?php echo tr('To connect you to your database with PDO, use the following code'); ?> :
+	<pre class="brush:php">
+		// Login to database
+		$database = 'tests';
+		$host = 'localhost';
+		$username = 'tests';
+		$password = 'tests';
+		$pdo = new PDO('mysql:dbname='.$database.';host='.$host.';',$username,$password);
+	</pre>
+	
+	<h3><?php echo tr('Dog'); ?></h3>
+	<h4><?php echo tr('Class diagram'); ?></h4>
+	<img src="<?php echo Request::getBase(); ?>media/help/dog.png" alt="Class diagramme of dog example" />
+	<h4><?php echo tr('Definitions'); ?></h4>
+	<code>
+		[dog:|name,string|]
+	</code>
+	<h4><?php echo tr('Using the generated code'); ?></h4>
+	<pre class="brush:php">
+		// Creation of dogs
+		Dog::create($pdo,'Bill');
+		Dog::create($pdo,'Droopy');
+		Dog::create($pdo,'Milou');
+		
+		// Display the names of dogs
+		$statement = Dog::selectAll($pdo);
+		while($dog = Dog::fetch($pdo,$statement)) {
+			echo $dog-&gt;getName();
+		}
+	</pre>
+	
+	<h3><?php echo tr('Persons and cars'); ?></h3>
+	<h4><?php echo tr('Class diagram'); ?></h4>
+	<img src="<?php echo Request::getBase(); ?>media/help/persons_cars.png" alt="Class diagramme of persons and cars example" />
+	<h4><?php echo tr('Definitions'); ?></h4>
+	<code>
+		[person:|firstname,string|,|lastname,string|,-car]<br/>
+		[car:|model,string|,|brand,string|,*person]
+	</code>
+	<h4><?php echo tr('Using the generated code'); ?></h4>
+	<pre class="brush:php">
+		// Creation of a person
+		$bond = Person::create($pdo,'James','Bond');
+		
+		// Creation of cars
+		$vanquish = Car::create($pdo,'Vanquish','Aston Martin');
+		$esprit = Car::create($pdo,'Esprit','Lotus');
+		$fastback = Car::create($pdo,'Fastback','Mustang');
+		
+		// Set the person as owner of the cars
+		$bond-&gt;addCar($vanquish);
+		$bond-&gt;addCar($esprit);
+		$bond-&gt;addCar($fastback);
+		
+		// List person's cars
+		foreach ($bond as $car) {
+			echo $car;
+		}
+	</pre>
+	
+	<h3><?php echo tr('Members, messages and posts'); ?></h3>
+	<h4><?php echo tr('Class diagram'); ?></h4>
+	<img src="<?php echo Request::getBase(); ?>media/help/members_messages_posts.png" alt="Class diagramme of members, messages and posts example" />
+	<h4><?php echo tr('Definitions'); ?></h4>
+	<code>
+		[member: |login,string/20|, |isAdmin,bool,,false|, |password,string/41|, *{sent,1}message, *{received,2}message]<br/>
+		[message: {sender,1}member, {recipient,2}member, |title,string/20|, |date,datetime|, |content,string|]<br/>
+		[post: member, |title,string/20|, |date,datetime|, |content,string|]<br/>
+		[post&lt;-question: *answer]<br/>
+		[post&lt;-answer: question]
+	</code>
+	<h4><?php echo tr('Using the generated code'); ?></h4>
+	<pre class="brush:php">
+		// Creation of members
+		$vador = Member::create($pdo,'Dark Vador',sha1('shmi'),true);
+		$luke = Member::create($pdo,'Luke Skywalker',sha1('force'));
+							
+		// List all members
+		foreach (Member::loadAll($pdo) as $member) {
+			echo $member;
+		}
+						
+		// Creation of a message between the members
+		$message = Message::create($pdo,$vador,$luke,'Important',time(),'I\'m your father');
+		
+		// Creation of a question and an answer
+		$question = Question::create($pdo,$luke,'Why ?',time(),'...');
+		$answer = Answer::create($pdo,$vador,'Because',time(),'...',$question);
+							
+		// List question's answers
+		$answers = $question-&gt;selectAnswers();
+		while ($answer = Answer::fetch($pdo,$answers)) {
+			echo $answer;
+		}
+	</pre>
+</div>

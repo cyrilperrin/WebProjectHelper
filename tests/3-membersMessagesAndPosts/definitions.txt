@@ -1,0 +1,5 @@
+[member: (u)|login,string/20|, |isAdmin,bool,,false|, |password,string/40|, *{sent,1}message, *{received,2}message]
+[message: {sender,1}member, {recipient,2}member, |title,string/20|, |date,datetime|, |content,string|]
+[post: member, |title,string/20|, |date,datetime|, |content,string|]
+[post<-question: *answer]
+[post<-answer: question]

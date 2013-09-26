@@ -1,0 +1,185 @@
+<!-- About -->
+<div id="about">
+	<h2><?php echo tr('Build the MySQL structure and the PHP code of your UML classes in a few clicks!'); ?></h2>
+</div>
+
+<!-- Operations -->
+<form id="operations" action="#" method="post" onsubmit="compile('<?php echo Request::buildURL(null,'index','generate') ?>');return false;">
+	<div id="define">
+			<h2>1) <?php echo tr('Define'); ?></h2>
+			<textarea cols="60" rows="19" id="definitions" onkeyup="clearLinks();"><?php echo tr('Puts elements definitions here ...'); ?></textarea>
+	</div>
+	<div id="generate">
+		<h2>2) <?php echo tr('Generate'); ?></h2>
+		<ul>
+			<li><label><input type="checkbox" name="zipsql" value="1" onchange="clearLinks();" /> <?php echo tr('Product zip file for MySQL scripts'); ?></label></li>
+			<li><label><input type="checkbox" name="zipphp" value="1" onchange="clearLinks();if($(this).is(':checked')) { $('#phpfilesprefix').removeAttr('disabled'); } else { $('#phpfilesprefix').attr('disabled','disabled'); }" /> <?php echo tr('Product zip file for PHP classes'); ?></label></li>
+			<li><label><input type="checkbox" name="fieldnamesbase" value="1" checked="checked" onchange="clearLinks();" /> <?php echo tr('Put fieldnames into base PHP classes'); ?></label></li>
+			<li><label><input type="checkbox" name="onlybase" value="1" onchange="clearLinks();" /> <?php echo tr('Generate only base PHP classes'); ?></label></li>
+			<li><?php echo tr('MYSQL datatables prefix'); ?> : <input type="text" size="10" name="prefixdatatables" onkeyup="clearLinks();" /></li>
+			<li><?php echo tr('PHP classes prefix'); ?> : <input type="text" size="10" id="phpclassesprefix" name="phpclassesprefix" onkeyup="clearLinks();" value="" /></li>
+			<li><?php echo tr('PHP files prefix'); ?> : <input type="text" size="10" id="phpfilesprefix" name="phpfilesprefix" onkeyup="clearLinks();" disabled="disabled" value="model" /></li>
+		</ul>
+		<input type="submit" value="<?php echo tr('Generate'); ?>" name="generate" />
+		<p class="message m_info"><?php echo tr('Already <span id="counter">'.$this->counter.'</span> generations !'); ?></p>
+	</div>
+	<div id="result">
+		<h2>3) <?php echo tr('Result'); ?></h2>
+		<div id="links">...</div>
+	</div>
+</form>
+
+<!-- PHP generation form -->
+<form id="generatePHP" action="<?php echo Request::buildURL(null,'index','generate') ?>" method="post" style="display:none;">
+	<input type="hidden" name="definitions" />
+	<input type="hidden" name="zip" />
+	<input type="hidden" name="prefixdatatables" />
+	<input type="hidden" name="phpclassesprefix" />
+	<input type="hidden" name="phpfilesprefix" />
+	<input type="hidden" name="generate" value="php" />
+	<input type="hidden" name="fieldnamesbase" />
+	<input type="hidden" name="onlybase" />
+	<input type="submit" />
+</form>
+
+<!-- SQL generation form -->
+<form id="generateSQL" action="<?php echo Request::buildURL(null,'index','generate') ?>" method="post" style="display:none;">
+	<input type="hidden" name="definitions" />
+	<input type="hidden" name="zip" />
+	<input type="hidden" name="prefixdatatables" />
+	<input type="hidden" name="generate" value="sql" />
+	<input type="submit" />
+</form>
+
+<!-- Help -->
+<div id="help">
+	<h2><?php echo tr('Syntaxe'); ?></h2>
+	
+	<div style="overflow:hidden;">
+	
+		<h3><?php echo tr('Elements'); ?></h3>
+		
+		<h4><?php echo tr('Scalars'); ?></h4>
+		
+		<code>|scalar,type,"description",default|</code>
+		
+		<p><?php echo tr('Examples'); ?> :</p>
+		<ul>
+			<li><code>|power,int|</code></li>
+			<li><code>|name,string|</code></li>
+		</ul>
+		<p class="message m_info"><?php echo tr('Type can be'); ?> : bool, int, float, string, date, datetime, time</p>
+		<p class="message m_info"><?php echo tr('Description and default value are optional'); ?></p>
+		<p class="message m_info"><?php echo tr('Additional default value for date and datetime scalars'); ?> : now</p>
+		<p class="message m_info"><?php echo tr('Limitation of int and string types'); ?> : <code>|phone,string/12|</code></p>
+		
+		<h4><?php echo tr('Objects'); ?></h4>
+		
+		<code>[object,"description"]</code>
+		
+		<p><?php echo tr('Examples'); ?> :</p>
+		<ul>
+			<li><code>[car]</code></li>
+			<li><code>[person]</code></li>
+		</ul>
+		<p class="message m_info"><?php echo tr('Description is optional'); ?></p>
+	
+		<h3><?php echo tr('Possession'); ?></h3>
+		
+		<code>[object1: object2, |scalar,type|]</code>
+		
+		<p><?php echo tr('Examples'); ?> :</p>
+		<ul>
+			<li><code>[car: |power,int|]</code></li>
+			<li><code>[person: |name,string|]</code></li>
+		</ul>
+		
+		<h4><?php echo tr('Multiplicities'); ?></h4>
+		
+		<h5><?php echo tr('One and only one'); ?></h5>
+		<code>[object1: object2]</code>
+		<p><?php echo tr('Example'); ?> : <code>[person: car]</code></p>
+		
+		<h5><?php echo tr('One or zero'); ?></h5>
+		<code>[object1: ?object2]</code>
+		<p><?php echo tr('Example'); ?> : <code>[person: ?car]</code></p>
+		
+		<h5><?php echo tr('Several'); ?></h5>
+		<code>[object1: *object2]</code>
+		<p><?php echo tr('Example'); ?> : <code>[person: *car]</code></p>
+		
+		<p class="message m_info"><?php echo tr('Multiplicity can be apply with scalars too'); ?></p>
+		
+		<h4><?php echo tr('Special Features'); ?></h4>
+		
+		<h5><?php echo tr('Id'); ?></h5>
+		<code>[object1: #object2]</code>
+		<p><?php echo tr('Example'); ?> : <code>[house: #street, #|number,int|]</code></p>
+		<p class="message m_info"><?php echo tr('Even an object can become an id'); ?></p>
+		
+		<h5><?php echo tr('List of elements'); ?></h5>
+		<code>[object1: -object2]</code>
+		<p><?php echo tr('Examples'); ?> :</p>
+		<ul>
+			<li><code>[school:-student]</code></li>
+			<li><code>[garage:-vehicle]</code></li>
+		</ul>
+		<p class="message m_info"><?php echo tr('Objects will be usable with foreach'); ?></p>
+		<p class="message m_info"><?php echo tr('It can be applied with scalars too'); ?></p>
+		
+		<h3><?php echo tr('Inheritance'); ?></h3>
+		<code>[object1&lt;-object2]</code>
+		<p><?php echo tr('Examples'); ?> :</p>
+		<ul>
+			<li><code>[vehicle&lt;-car]</code></li>
+			<li><code>[animal&lt;-human]</code></li>
+		</ul>
+		
+		<h3><?php echo tr('Associations'); ?></h3>
+		
+		<h4><?php echo tr('Simple'); ?></h4>
+		<code>[object1:{association}object2]</code>
+		<p><?php echo tr('Example'); ?> :</p>
+		<ul>
+			<li><code>[person:{favorite}car]</code></li>
+			<li><code>[person:?{mother}person,?{father}person]</code></li>
+		</ul>
+		
+		<h4><?php echo tr('Correspondence'); ?></h4>
+		<code>[object: ?{name,num}object, {name,num}object]</code>
+		<p><?php echo tr('Examples'); ?> :</p>
+		<ul>
+			<li><code>[folder: ?{parent,1}folder, *{child,1}folder]</code></li>
+			<li>
+				<code>
+					[member: *{sent,1}message, *{received,2}message]<br/>
+					[message: {sender,1}member, {recipient,2}member]
+				</code>
+			</li>
+		</ul>
+		<p class="message m_info"><?php echo tr('The number identify a link between two associations'); ?></p>
+	</div>
+	<h2><?php echo tr('Examples'); ?></h2>
+	
+	<h3><?php echo tr('Simple'); ?></h3>
+	<code>
+		(s)[dog:|name,string|]
+	</code>			
+	
+	<h3><?php echo tr('Classic'); ?></h3>
+	<code>
+		(s)[person:|firstname,string|,|lastname,string|,-car]<br/>
+		(s)[car:|model,string|,|brand,string|,*person]
+	</code>				
+	
+	<h3><?php echo tr('Advanced'); ?></h3>
+	<code>
+		(s)[member: |login,string/20|, |isAdmin,bool,,false|, |password,string/41|, *{sent,1}message, *{received,2}message]<br/>
+		(s)[message: {sender,1}member, {recipient,2}member, |title,string/20|, |date,datetime|, |content,string|]<br/>
+		[post: member, |title,string/20|, |date,datetime|, |content,string|]<br/>
+		(s)[post&lt;-question: *answer]<br/>
+		(s)[post&lt;-answer: question]
+	</code>
+	
+	<p class="message m_help"><?php echo tr('For more examples and explanations, go to <a href="'.Request::buildURL(null,'index','help').'">help page</a>'); ?>.</p>
+</div>
