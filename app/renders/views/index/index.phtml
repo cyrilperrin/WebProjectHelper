@@ -163,22 +163,22 @@
 	
 	<h3><?php echo tr('Simple'); ?></h3>
 	<code>
-		(s)[dog:|name,string|]
+		[dog:|name,string|]
 	</code>			
 	
 	<h3><?php echo tr('Classic'); ?></h3>
 	<code>
-		(s)[person:|firstname,string|,|lastname,string|,-car]<br/>
-		(s)[car:|model,string|,|brand,string|,*person]
+		[person:|firstname,string|,|lastname,string|,-car]<br/>
+		[car:|model,string|,|brand,string|,*person]
 	</code>				
 	
 	<h3><?php echo tr('Advanced'); ?></h3>
 	<code>
-		(s)[member: |login,string/20|, |isAdmin,bool,,false|, |password,string/41|, *{sent,1}message, *{received,2}message]<br/>
-		(s)[message: {sender,1}member, {recipient,2}member, |title,string/20|, |date,datetime|, |content,string|]<br/>
+		[member: |login,string/20|, |isAdmin,bool,,false|, |password,string/41|, *{sent,1}message, *{received,2}message]<br/>
+		[message: {sender,1}member, {recipient,2}member, |title,string/20|, |date,datetime|, |content,string|]<br/>
 		[post: member, |title,string/20|, |date,datetime|, |content,string|]<br/>
-		(s)[post&lt;-question: *answer]<br/>
-		(s)[post&lt;-answer: question]
+		[post&lt;-question: *answer]<br/>
+		[post&lt;-answer: question]
 	</code>
 	
 	<p class="message m_help"><?php echo tr('For more examples and explanations, go to <a href="'.Request::buildURL(null,'index','help').'">help page</a>'); ?>.</p>
