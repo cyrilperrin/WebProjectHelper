@@ -1,12 +1,5 @@
 // When DOM is ready
 $(document).ready(function() {
-	// Corners
-	$('input:submit, .button').corner();
-	$('#language').corner('bl');
-	
-	// Clear textarea on click
-	$('#define textarea').clearField();
-	
 	// Cut help by columns
 	$('#help > div').columnize({width: 500});
 });
@@ -29,9 +22,6 @@ function compile(url) {
 		function (data) {
 			// Add data to result zone
 			$('#links').html(data);
-			
-			// Corners
-			$('.button').corner();
 			
 			// Display result zone
 			$('#links').fadeIn(250);

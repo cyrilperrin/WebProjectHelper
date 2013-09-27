@@ -7,7 +7,7 @@
 <form id="operations" action="#" method="post" onsubmit="compile('<?php echo Request::buildURL(null,'index','generate') ?>');return false;">
 	<div id="define">
 			<h2>1) <?php echo tr('Define'); ?></h2>
-			<textarea cols="60" rows="19" id="definitions" onkeyup="clearLinks();"><?php echo tr('Puts elements definitions here ...'); ?></textarea>
+			<textarea cols="60" rows="19" id="definitions" onkeyup="clearLinks();" onfocus="if(this.innerHTML == '<?php echo tr('Puts elements definitions here ...'); ?>') { this.innerHTML = ''; }" onblur="if(this.innerHTML == '') { this.innerHTML = '<?php echo tr('Puts elements definitions here ...'); ?>'; }"><?php echo tr('Puts elements definitions here ...'); ?></textarea>
 	</div>
 	<div id="generate">
 		<h2>2) <?php echo tr('Generate'); ?></h2>

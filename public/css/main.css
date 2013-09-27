@@ -117,6 +117,7 @@ textarea:focus, input[type="text"]:focus {
 	padding-left:35px;
 	background-repeat:no-repeat;
 	background-position:5px center;
+	border-bottom-left-radius:10px;
 }
 #menu #language.fr { background-image:url('../media/flags/24x24/france.png'); }
 #menu #language.en { background-image:url('../media/flags/24x24/usa.png'); }
@@ -190,10 +191,14 @@ textarea:focus, input[type="text"]:focus {
 	background-repeat:no-repeat;
 	background-position:6px center;
 	padding-left:40px;
+	border-radius: 10px;
 }
 #operations #result h2 {
 	background-color:#005CB7;
 	border-bottom:5px solid #04498E;
+}
+#operations #result #links .button {
+	border-radius: 10px;
 }
 @media (min-width: 900px) and (max-width: 1350px) {
 	#operations #define {
