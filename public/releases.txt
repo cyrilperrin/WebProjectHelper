@@ -1,45 +1,55 @@
-[(major release).(minor release).(bugfix)]
+(major release).(minor release).(bugfix)
 
-1.6.1 :
+1.7.0 (27/09/2013) :
+- add relod() method
+- add get*Id() method
+- add set*ById() method
+- add addListOf*() method
+- add removeListOf*() method
+- add removeAll*() method
+- add $lazyload parameter to get*() methods
+- add PHPUnit tests
+- correct *Base classes phpdoc
+- valid HTML5
+
+1.6.1 (12/06/2013) :
 - improve memory usage in fetch() method
 - correct a bug in fetch() method for date/datetime fields
 
-1.6.0 :
+1.6.0 (15/04/2013) :
 - add "Prefix for PHP classes" option
 - correct a bug in MySQL CREATE script for association tables
 
-1.5.1 :
+1.5.1 (16/09/2012) :
 - correct a bug on generation options
 
-1.5.0 :
+1.5.0 (29/08/2012) :
 - use MVC library
 
-1.4.2 :
+1.4.2 (15/06/2012) :
 - correct a bug in update() method
 
-1.4.1 :
+1.4.1 (24/05/2012) :
 - correct a bug on "Put fieldnames into base PHP classes" and "Generate only base PHP classes" options 
 
-1.4.0 :
+1.4.0 (23/05/2012) :
 - add "Put fieldnames into base PHP classes" option
 - add "Generate only base PHP classes" option
 
-1.2.0 :
+1.2.0 (05/04/2012) :
 - add a fetchAll() method
 
-1.1.0 :
+1.1.0 (03/04/2012) :
 - call _select() method from selectBy*() methods
 - correct a bug in load() method 
 
-1.0.6 :
+1.0.1 (24/10/2011) :
 - add missing space character before WHERE instruction in _select() method
-- correct spelling mistakes in french traduction
-
-1.0.4 :
+- correct spelling mistakes in french translation
 - correct a bug in delete() method
 - correct DECIMAL type in MySQL script
 - correct getter name for generated id
 - customizable fieldnames
 
-1.0.0 :
+1.0.0 (19/10/2011) :
 - final release
