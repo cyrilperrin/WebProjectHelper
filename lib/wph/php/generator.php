@@ -1907,7 +1907,7 @@ class PHP_Generator {
 		$execute = Variable::var_execute_update_query();
 		
 		// Ids
-		$ids = array_shift(PHP::ids_attrs_opts($element,true));
+		list($ids) = PHP::ids_attrs_opts($element,true);
 		
 		// Header
 		$string .= $this->generate_method_header($nb_indents,'public',false,PHP::method_setter_by_id($element,$association),tr('Set the '.lcfirst(PHP::name($element,$association)).' by id'),array_merge(PHP::to_vars($ids),array($execute)),array(count($ids) => true),Variable::var_success());
@@ -2154,7 +2154,7 @@ class PHP_Generator {
 		$string = '';
 	
 		// Ids
-		$ids = array_shift(PHP::ids_attrs_opts($element,true));
+		list($ids) = PHP::ids_attrs_opts($element,true);
 	
 		// Header
 		$string .= $this->generate_method_header($nb_indents,'public',false,PHP::method_adder_by_id($element,$elem_association),tr('Add a '.lcfirst(PHP::name($element,$elem_association)).' by id'),PHP::to_vars($ids),array(),Variable::var_success());
@@ -2300,7 +2300,7 @@ class PHP_Generator {
 		$string = '';
 
 		// Ids
-		$ids = array_shift(PHP::ids_attrs_opts($element,true));
+		list($ids) = PHP::ids_attrs_opts($element,true);
 	
 		// Header
 		$string .= $this->generate_method_header($nb_indents,'public',false,PHP::method_remover_by_id($element,$elem_association),tr('Remove a '.lcfirst(PHP::name($element,$elem_association)).' by id'),PHP::to_vars($ids),array(),Variable::var_success());
