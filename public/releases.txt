@@ -1,5 +1,8 @@
 (major release).(minor release).(bugfix)
 
+1.7.1 (30/11/2013) :
+- make generated PHP files PSR-0 compliant
+
 1.7.0 (27/09/2013) :
 - add relod() method
 - add get*Id() method
