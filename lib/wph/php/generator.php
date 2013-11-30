@@ -74,15 +74,14 @@ class PHP_Generator {
 		}
 		
 		// Generate requires
-		if(!PHP::get_generate_only_base_classes()) {
+		/*if(!PHP::get_generate_only_base_classes()) {
 			file_put_contents($dirname.PHP::file_requires(),nl('<?php').nl().$this->generate_requires());
-		}
+		}*/
 		
 		// Generate association classes
 		if(!PHP::get_generate_only_base_classes()) {
-			$assoc_classes = $this->generate_assoc_classes(0);
-			if ($assoc_classes != '') {
-				file_put_contents($dirname.PHP::file_assoc_classes(),nl('<?php').nl().$assoc_classes);
+			foreach($this->generate_assoc_classes(0) as $fileName => $fileContent) {
+				file_put_contents($dirname.$fileName,$fileContent);
 			}
 		}
 	}
@@ -121,7 +120,7 @@ class PHP_Generator {
 		
 		// Generate association classes
 		if(!PHP::get_generate_only_base_classes()) {
-			$assoc_classes = $this->generate_assoc_classes(0);
+			$assoc_classes = implode(nl(),$this->generate_assoc_classes(0));
 			if ($assoc_classes != '') {
 				$classes[] = $assoc_classes;
 			}
@@ -151,15 +150,14 @@ class PHP_Generator {
 		}
 		
 		// Generate requires
-		if(!PHP::get_generate_only_base_classes()) {
+		/*if(!PHP::get_generate_only_base_classes()) {
 			$zip->addfile(nl('<?php').nl().$this->generate_requires(), PHP::file_requires());
-		}
+		}*/
 		
 		// Generate association classes
 		if(!PHP::get_generate_only_base_classes()) {
-			$assoc_classes = $this->generate_assoc_classes(0);
-			if ($assoc_classes != '') {
-				$zip->addfile(nl('<?php').nl().$assoc_classes, PHP::file_assoc_classes());
+			foreach($this->generate_assoc_classes(0) as $fileName => $fileContent) {
+				$zip->addfile(nl('<?php').nl().$fileContent, $fileName);
 			}
 		}
 		
@@ -170,11 +168,11 @@ class PHP_Generator {
 	/**
 	 * Generate association classes
 	 * @param $nb_indents int indent account
-	 * @return association classes
+	 * @return array association classes
 	 */
 	public function generate_assoc_classes($nb_indents) {
-		// Init string
-		$string = '';
+		// Init strings
+		$strings = array();
 		
 		// Generate association classes
 		$objects_done = array();
@@ -182,14 +180,14 @@ class PHP_Generator {
 			$assoc_done = array();
 			foreach ($object->getAttrsMult(Attribute::M_SEVERAL) as $attr) {
 				if ($attr->getElem() instanceof Scalar) {
-					$string .= nl().$this->generate_assoc_class($nb_indents,$object,null,$attr->getElem(),null);
+					$strings[PHP::file_assoc_class($object,null,$attr->getElem(),null)] = $this->generate_assoc_class($nb_indents,$object,null,$attr->getElem(),null);
 				}
 				elseif ($object->equals($attr->getElem()) && !$attr->isAssociated()) {
-					$string .= nl().$this->generate_assoc_class($nb_indents,$object,null,$attr->getElem(),$attr->getAssoc());
+					$strings[PHP::file_assoc_class($object,null,$attr->getElem(),$attr->getAssoc())] = $this->generate_assoc_class($nb_indents,$object,null,$attr->getElem(),$attr->getAssoc());
 				}
 				elseif ($attr->getCorrespondence()->isMult(Attribute::M_SEVERAL)) {
 					if (!$object->equals($attr->getElem()) && in_array($attr->getElem()->getId(),$objects_done) || $object->equals($attr->getElem()) &&  in_array($attr->getCorrespondence()->getAssoc()->getId(),$assoc_done)) {
-						$string .= nl().$this->generate_assoc_class($nb_indents,$object,$attr->getCorrespondence()->getAssoc(),$attr->getElem(),$attr->getAssoc());
+						$strings[PHP::file_assoc_class($object,$attr->getCorrespondence()->getAssoc(),$attr->getElem(),$attr->getAssoc())] = $this->generate_assoc_class($nb_indents,$object,$attr->getCorrespondence()->getAssoc(),$attr->getElem(),$attr->getAssoc());
 					}
 					if ($attr->getAssoc() != null) { $assoc_done[] = $attr->getAssoc()->getId(); }
 				}
@@ -197,8 +195,8 @@ class PHP_Generator {
 			$objects_done[] = $object->getId();
 		}
 		
-		// Return string
-		return $string;
+		// Return strings
+		return $strings;
 	}
 	
 	/**

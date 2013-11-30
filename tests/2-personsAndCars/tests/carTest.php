@@ -787,7 +787,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     }
     
@@ -826,7 +826,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     }
     
@@ -866,7 +866,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     }
     
@@ -909,7 +909,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove person of a car
@@ -924,7 +924,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove person of a car
@@ -938,7 +938,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove person of a car
@@ -951,7 +951,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove person of a car
@@ -1000,7 +1000,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
 
     	// Remove a list of persons of a car
@@ -1015,7 +1015,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove a list of persons of a car
@@ -1029,7 +1029,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
 
     	// Remove a list of persons of a car
@@ -1078,7 +1078,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove person of a car by id
@@ -1093,7 +1093,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove person of a car by id
@@ -1107,7 +1107,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove person of a car by id
@@ -1120,7 +1120,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove person of a car by id
@@ -1172,7 +1172,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove all persons of a car
@@ -1190,7 +1190,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove all persons of a car
@@ -1207,7 +1207,7 @@ class CarTest extends GenericTest
     			)
     	));
     	$expected = $dataset->getTable('car_person');
-    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Car_Person::FIELDNAME_CAR_IDCAR.', '.Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Car_Person::TABLENAME);
+    	$actual = $this->getConnection()->createQueryTable('car_person', 'SELECT '.Association_Car_Person::FIELDNAME_CAR_IDCAR.', '.Association_Car_Person::FIELDNAME_PERSON_IDPERSON.' FROM '.Association_Car_Person::TABLENAME);
     	$this->assertTablesEqual($expected, $actual);
     	
     	// Remove all persons of a car

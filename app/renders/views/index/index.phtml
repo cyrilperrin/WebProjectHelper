@@ -18,7 +18,7 @@
 			<li><label><input type="checkbox" name="onlybase" value="1" onchange="clearLinks();" /> <?php echo tr('Generate only base PHP classes'); ?></label></li>
 			<li><?php echo tr('MYSQL datatables prefix'); ?> : <input type="text" size="10" name="prefixdatatables" onkeyup="clearLinks();" /></li>
 			<li><?php echo tr('PHP classes prefix'); ?> : <input type="text" size="10" id="phpclassesprefix" name="phpclassesprefix" onkeyup="clearLinks();" value="" /></li>
-			<li><?php echo tr('PHP files prefix'); ?> : <input type="text" size="10" id="phpfilesprefix" name="phpfilesprefix" onkeyup="clearLinks();" disabled="disabled" value="model" /></li>
+			<li><?php echo tr('PHP files prefix'); ?> : <input type="text" size="10" id="phpfilesprefix" name="phpfilesprefix" onkeyup="clearLinks();" disabled="disabled" value="Model" /></li>
 		</ul>
 		<input type="submit" value="<?php echo tr('Generate'); ?>" name="generate" />
 		<p class="message m_info"><?php echo tr('Already <span id="counter">'.$this->counter.'</span> generations !'); ?></p>
