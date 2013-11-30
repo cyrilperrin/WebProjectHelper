@@ -150,19 +150,21 @@ class PHP {
 	/**
 	 * Get class name
 	 * @param $object Object object
+	 * @param $usePrefix boolean use prefix ?
 	 * @return string class name
 	 */
-	public static function name_class(Object $object) {
-		return self::get_classes_prefix().implode('_',array_map('ucfirst',explode('_',$object->getName())));
+	public static function name_class(Object $object,$usePrefix=true) {
+		return ($usePrefix ? self::get_classes_prefix() : '').implode('_',array_map('ucfirst',explode('_',$object->getName())));
 	}
 
 	/**
 	 * Get base class name
 	 * @param $object Object object
+	 * @param $usePrefix boolean use prefix ?
 	 * @return string base class name
 	 */
-	public static function name_class_base(Object $object) {
-		return self::get_classes_prefix().'Base_'.implode('_',array_map('ucfirst',explode('_',$object->getName())));
+	public static function name_class_base(Object $object,$usePrefix=true) {
+		return ($usePrefix ? self::get_classes_prefix() : '').'Base_'.implode('_',array_map('ucfirst',explode('_',$object->getName())));
 	}
 	
 	/**
@@ -171,20 +173,21 @@ class PHP {
 	 * @param $obj_association Association object association from element
 	 * @param $element Element element
 	 * @param $elem_association Association element association from object
+	 * @param $usePrefix boolean use prefix ?
 	 * @return string association class name
 	 */
-	public static function name_assoc_class(Object $object, $obj_association, Element $element, $elem_association) {
+	public static function name_assoc_class(Object $object, $obj_association, Element $element, $elem_association,$usePrefix=true) {
 		// Build names
 		$names = array(
-			($obj_association == null ? '' : implode('_',array_map('ucfirst',explode('_',$obj_association->getName()))).'_').implode('_',array_map('ucfirst',explode('_',$object->getName()))),
-			($elem_association == null ? '' : implode('_',array_map('ucfirst',explode('_',$elem_association->getName()))).'_').implode('_',array_map('ucfirst',explode('_',$element->getName())))
+			($obj_association == null ? '' : implode('',array_map('ucfirst',explode('_',$obj_association->getName()))).'_').implode('',array_map('ucfirst',explode('_',$object->getName()))),
+			($elem_association == null ? '' : implode('',array_map('ucfirst',explode('_',$elem_association->getName()))).'_').implode('',array_map('ucfirst',explode('_',$element->getName())))
 		);
 			
 		// Sort names
 		sort($names);
 		
 		// Assemble names
-		return self::get_classes_prefix().'Association_'.implode('_',$names);
+		return ($usePrefix ? self::get_classes_prefix() : '').'Association_'.implode('',$names);
 	}
 	
 	/**
@@ -550,7 +553,7 @@ class PHP {
 	 * @return string file name for class
 	 */
 	public static function file_class(Object $object) {
-		return self::get_files_prefix().self::name_class($object).'.php';
+		return self::get_files_prefix().self::name_class($object, false).'.php';
 	}
 	
 	/**
@@ -559,7 +562,7 @@ class PHP {
 	 * @return string file name for base class
 	 */
 	public static function file_class_base(Object $object) {
-		return self::get_files_prefix().self::name_class_base($object).'.php';
+		return self::get_files_prefix().self::name_class_base($object, false).'.php';
 	}
 	
 	/**
@@ -571,7 +574,7 @@ class PHP {
 	 * @return string file name for association class
 	 */
 	public static function file_assoc_class($object, $obj_association, $element, $elem_association) {
-		return self::get_files_prefix().self::name_assoc_class($object, $obj_association, $element, $elem_association).'.php';
+		return self::get_files_prefix().self::name_assoc_class($object, $obj_association, $element, $elem_association, false).'.php';
 	}
 	
 	/**
