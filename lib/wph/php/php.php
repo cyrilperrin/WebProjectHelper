@@ -218,7 +218,7 @@ class PHP {
 	 * @return string attribute name ?
 	 */
 	public static function name_attribute(Element $element,$association=null,$dollar=true) {
-		return ($dollar?'$':'').lcfirst(PHP::name($element,$association));
+		return ($dollar?'$':'').'_'.lcfirst(PHP::name($element,$association));
 	}
 	
 	/**

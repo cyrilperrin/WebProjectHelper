@@ -53,7 +53,7 @@ function nl($text='',$nbIndents=0,$newLine=true) {
 	$string = '';
 	
 	// Generate tabulations
-	$tabs = rpt("\t",$nbIndents);
+	$tabs = rpt(' ',$nbIndents*4);
 	
 	// Indent each lines
 	if ($text != '') { $string .= $tabs.implode($tabs,explode("\n",$text)); }

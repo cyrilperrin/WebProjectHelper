@@ -2676,6 +2676,11 @@ class PHP_Generator {
 			$parameters[] = $type.PHP::name_parameter($param).$default;
 		}
 		
+		// Set underscore if function is private or protected
+		if (($accessibility == 'private' || $accessibility == 'protected') && substr($name, 0, 1) != '_') {
+			$name = '_'.$name;
+		}
+		
 		// Return method header
 		return $documentation.nl($accessibility.' '.($static?'static ':'').'function '.$name.'('.implode(',',$parameters).')',$nb_indents).nl('{',$nb_indents);
 	}
