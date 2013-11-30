@@ -647,7 +647,7 @@ class PHP_Generator {
 			} else { $return = ''; }
 			
 			$string .= nl('// '.tr('Create parent'),$nb_indents+1).
-			           nl($return.'parent::create('.implode(',',array_map('PHP::name_parameter',array_merge(array($pdo),$ids_parent,$attrs_parent,$opts_parent))).');',$nb_indents+1).
+			           nl($return.'parent::_create('.implode(',',array_map('PHP::name_parameter',array_merge(array($pdo),$ids_parent,$attrs_parent,$opts_parent))).');',$nb_indents+1).
 			           nl('',$nb_indents+1);
 		}
 		
