@@ -1052,9 +1052,9 @@ class PHP_Generator {
 					}
 				} else if($attr->getElem() instanceof Scalar && $attr->getElem()->isType(Scalar::T_BOOL)) {
 					if($attr->isMult(Attribute::M_OPT)) {
-						$cons_value = $extr_value.' === null ? null : boolval('.$extr_value.')';
+						$cons_value = $extr_value.' === null ? null : ('.$extr_value.' ? true : false)';
 					} else {
-						$cons_value = 'boolval('.$extr_value.')';
+						$cons_value = $extr_value.' ? true : false';
 					}
 				} else {
 					$cons_value = $extr_value;

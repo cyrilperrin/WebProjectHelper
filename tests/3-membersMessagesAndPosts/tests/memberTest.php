@@ -45,6 +45,22 @@ class MemberTest extends GenericTest
     }
     
     /**
+     * GetName test
+     */
+    public function testGetIsAdmin()
+    {
+    	// Create members
+		$vador = Member::create(self::$pdo,'Dark Vador',sha1('shmi'),true);
+		$luke = Member::create(self::$pdo,'Luke Skywalker',sha1('force'));
+    	
+    	// Assert getIdDog
+    	$this->assertEquals('boolean', gettype($vador->getIsAdmin()));
+    	$this->assertEquals(true, $vador->getIsAdmin());
+    	$this->assertEquals('boolean', gettype($luke->getIsAdmin()));
+    	$this->assertEquals(false, $luke->getIsAdmin());
+    }
+    
+    /**
      * Delete test
      */
     public function testDelete()
