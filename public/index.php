@@ -4,7 +4,7 @@
 ini_set('session.use_only_cookies', '1');
 
 // Define release
-define('RELEASE','1.7.1');
+define('RELEASE','1.7.2');
 
 // Define root
 define('ROOT_DIR', realpath(dirname(__FILE__).'/..').'/');

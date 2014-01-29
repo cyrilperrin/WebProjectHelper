@@ -1,11 +1,14 @@
 (major release).(minor release).(bugfix)
 
+1.7.2 (29/01/2014) :
+- do not use boolval()
+
 1.7.1 (30/11/2013) :
 - improve generated PHP files PSR-0 standard compliancy
 - improve generated PHP files Zend Coding standard compliancy
 
 1.7.0 (27/09/2013) :
-- add relod() method
+- add reload() method
 - add get*Id() method
 - add set*ById() method
 - add addListOf*() method
