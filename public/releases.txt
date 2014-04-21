@@ -1,5 +1,8 @@
 (major release).(minor release).(bugfix)
 
+1.7.3 (21/04/2014) :
+- correct a bug when an Object is used as ID in exists() and count() functions
+
 1.7.2 (29/01/2014) :
 - do not use boolval()
 
