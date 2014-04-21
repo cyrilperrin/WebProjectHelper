@@ -306,7 +306,7 @@ class Query {
 					$ids[] =  '\'.'.PHP::name_class($object).'::'.PHP::const_field($attr->getElem()).'.\'';
 				} else {
 					foreach (MySQL::ids($attr->getElem()) as $id) {
-						$ids[] = '\'.'.PHP::name_class($object).'::'.PHP::const_field_foreign($id,$attr->getAssoc()).'.\'';
+						$ids[] = '\'.'.PHP::name_class($object).'::'.PHP::const_field_foreign($attr->getElem(),$id,$attr->getAssoc()).'.\'';
 					}
 				}
 			}
@@ -334,7 +334,7 @@ class Query {
 					$ids[] =  '\'.'.PHP::name_class($object).'::'.PHP::const_field($attr->getElem()).'.\'';
 				} else {
 					foreach (MySQL::ids($attr->getElem()) as $id) {
-						$ids[] = '\'.'.PHP::name_class($object).'::'.PHP::const_field_foreign($id,$attr->getAssoc()).'.\'';
+						$ids[] = '\'.'.PHP::name_class($object).'::'.PHP::const_field_foreign($attr->getElem(),$id,$attr->getAssoc()).'.\'';
 					}
 				}
 			}
