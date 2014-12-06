@@ -9,8 +9,8 @@ php:
 
 before_script:
    - mysql -e 'create database tests;'
-   - mysql -e 'grant usage on *.* to tests@localhost identified by 'tests';'
-   - mysql -e 'grant all privileges on tests.* to tests@localhost ;'
+   - mysql -e 'grant usage on *.* to tests@localhost identified by "tests";'
+   - mysql -e 'grant all privileges on tests.* to tests@localhost;'
 
 script:
    - cd tests/1-dogs
