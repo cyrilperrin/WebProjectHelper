@@ -217,7 +217,7 @@ class PHP_Generator {
 		           nl(' * '.tr('Association class between '.PHP::name($object,$obj_association).' and '.PHP::name($element,$elem_association)),$nb_indents).
 		           nl(' * @name '.PHP::name_assoc_class($object, $obj_association, $element, $elem_association),$nb_indents).
 		           nl(' * @version '.tr(date('m/d/Y').' (mm/dd/yyyy)'),$nb_indents).
-		           nl(' * @author WebProjectHelper (http://www.elfangels.fr/webprojecthelper/)',$nb_indents).
+		           nl(' * @author WebProjectHelper (http://www.cyrilperrin.fr/webprojecthelper/)',$nb_indents).
 		           nl(' */',$nb_indents);
 		
 		// Header
@@ -406,7 +406,7 @@ class PHP_Generator {
 		$documentation = nl('/**',$nb_indents).
 		                 nl(' * @name '.PHP::name_class_base($object),$nb_indents).
 		                 nl(' * @version '.tr(date('m/d/Y').' (mm/dd/yyyy)'),$nb_indents).
-		                 nl(' * @author WebProjectHelper (http://www.elfangels.fr/webprojecthelper/)',$nb_indents).
+		                 nl(' * @author WebProjectHelper (http://www.cyrilperrin.fr/webprojecthelper/)',$nb_indents).
 		                 nl(' */',$nb_indents);
 		                 
 		// Init header
