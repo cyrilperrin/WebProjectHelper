@@ -1,21 +1,21 @@
 language: php
 
 php:
-	- 5.6
-	- 5.5
-	- 5.4
-	- 5.3
-	- hhvm
+   - 5.6
+   - 5.5
+   - 5.4
+   - 5.3
+   - hhvm
 
 before_script:
-	- mysql -e 'create database tests;'
-	- mysql -e 'grant usage on *.* to tests@localhost identified by 'tests';'
-	- mysql -e 'grant all privileges on tests.* to tests@localhost ;'
+   - mysql -e 'create database tests;'
+   - mysql -e 'grant usage on *.* to tests@localhost identified by 'tests';'
+   - mysql -e 'grant all privileges on tests.* to tests@localhost ;'
 
 script:
-	- cd tests/1-dogs
-	- phpunit
-	- cd ../2-personsAndCars
-	- phpunit
-	- cd ../3-membersMessagesAndPosts
-	- phpunit
+   - cd tests/1-dogs
+   - phpunit
+   - cd ../2-personsAndCars
+   - phpunit
+   - cd ../3-membersMessagesAndPosts
+   - phpunit
