@@ -1,4 +1,4 @@
-webprojecthelper
+WebProjectHelper
 ================
 [![Build Status](https://travis-ci.org/cyrilperrin/WebProjectHelper.svg?branch=master)](https://travis-ci.org/cyrilperrin/WebProjectHelper)
 
