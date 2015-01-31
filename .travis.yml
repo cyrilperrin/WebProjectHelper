@@ -13,9 +13,11 @@ before_script:
    - mysql -uroot -e 'grant all privileges on tests.* to tests@localhost;'
 
 script:
-   - cd tests/1-dogs
+   - cd tests/dogs
    - phpunit
-   - cd ../2-personsAndCars
+   - cd ../personsAndCars
    - phpunit
-   - cd ../3-membersMessagesAndPosts
+   - cd ../membersMessagesAndPosts
+   - phpunit
+   - cd ../issues
    - phpunit

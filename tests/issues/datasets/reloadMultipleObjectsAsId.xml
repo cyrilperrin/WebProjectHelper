@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<dataset>
+    <table name="a_issue1"></table>
+    <table name="b_issue1"></table>
+    <table name="c_issue1"></table>
+    <table name="d_issue1"></table>
+</dataset>

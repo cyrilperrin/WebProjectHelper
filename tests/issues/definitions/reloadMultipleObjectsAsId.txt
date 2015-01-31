@@ -1,0 +1,4 @@
+[a_issue1]
+[b_issue1]
+[c_issue1:#a_issue1,#b_issue1]
+[d_issue1:|e,string|,c_issue1]

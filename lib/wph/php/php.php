@@ -614,18 +614,41 @@ class PHP {
 		$keys = array();
 		
 		// Get keys
-		foreach ($object->getAttrsIds() as $attr) {
+		foreach ($object->getAncestor()->getAttrsIds() as $attr) {
 			if ($attr->getElem() instanceof Scalar) {
-				$keys[] = PHP::key($attr->getElem());
+				$keys[] = PHP::key($attr->getElem(),$attr->getAssoc());
 			} else {
 				foreach (PHP::keys($attr->getElem(),$separator) as $key) {
-					$keys[] = PHP::key($attr->getElem()).$separator.$key;
+					$keys[] = PHP::key($attr->getElem(),$attr->getAssoc()).$separator.$key;
 				}
 			}
 		}
 		
 		// Return array
 		return $keys;
+	}
+	
+	/**
+	 * Get recursive load
+	 * @param $attributeName string attribute name
+	 * @param $objet Objet object
+	 * @param $association Association association
+	 * @param $key string key
+	 * @return string recursive load
+	 */
+	public static function recursive_load($attributeName,Object $object,$association=null,$key='') {
+		// Get params
+		$params = array();
+		foreach ($object->getAncestor()->getAttrsIds() as $attr) {
+			if ($attr->getElem() instanceof Scalar) {
+				$params[] = $attributeName.'[\''.$key.PHP::key($attr->getElem()).'\']';
+			} else {
+				$params[] = PHP::recursive_load($attributeName,$attr->getElem(),$attr->getAssoc(),$key.PHP::key($object,$association).'-');
+			}
+		}
+		
+		// Build/Return load
+		return PHP::name_class($object).'::'.PHP::method_load().'('.PHP::attribute(Variable::var_pdo()).','.implode(',',$params).')';
 	}
 	
 	/**
@@ -638,7 +661,7 @@ class PHP {
 		$ids = array();
 		
 		// Get scalar ids
-		foreach ($object->getAttrsIds() as $attr) {
+		foreach ($object->getAncestor()->getAttrsIds() as $attr) {
 			if ($attr->getElem() instanceof Scalar) {
 				$ids[] = $attr->getElem();
 			} else {

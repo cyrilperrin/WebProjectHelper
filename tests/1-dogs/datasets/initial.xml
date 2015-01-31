@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<dataset>
-    <table name="dog">
-        <column>iddog</column>
-        <column>name</column>
-    </table>
-</dataset>

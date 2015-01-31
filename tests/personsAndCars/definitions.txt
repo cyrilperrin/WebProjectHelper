@@ -1,0 +1,2 @@
+[person:|firstname,string|,|lastname,string|,-car]
+[car:|model,string|,|brand,string|,*person] 

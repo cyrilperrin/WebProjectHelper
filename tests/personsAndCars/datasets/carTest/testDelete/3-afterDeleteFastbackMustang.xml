@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<dataset>
+    <table name="car">
+        <column>model</column>
+        <column>brand</column>
+        <row>
+        	<value>Ford Torino</value>
+        	<value>Ford</value>
+        </row>
+    </table>
+</dataset>

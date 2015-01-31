@@ -1191,7 +1191,7 @@ class PHP_Generator {
 					$extr_values[] = $extr_value;
 					$attr_ids[] = '\''.$key.'\' => '.$extr_value;
 				}
-				$save_value[] = 'array('.implode(', ',$attr_ids).')';
+				$save_value = 'array('.implode(', ',$attr_ids).')';
 			}
 			if(!$attr->isId()) {
 				$save_values[] = PHP::attribute($attr->getElem(),$attr->getAssoc()).' = '.$save_value.';';
@@ -1716,11 +1716,22 @@ class PHP_Generator {
 			
 			// Params
 			$params = array();
-			if (count($keys = PHP::keys($element)) > 1) {
-				foreach ($keys as $key) {
-					$params[] = PHP::attribute($element,$association).'[\''.$key.'\']';
+			$attrsIds = $element->getAncestor()->getAttrsIds();
+			if (count($attrsIds) != 1) {
+				foreach ($attrsIds as $attr) {
+					if ($attr->getElem() instanceof Scalar) {
+						$params[] = PHP::attribute($element,$association).'[\''.PHP::key($attr->getElem(),$attr->getAssoc()).'\']';
+					} else {
+						$params[] = PHP::recursive_load(PHP::attribute($element,$association),$attr->getElem(),$attr->getAssoc(),PHP::key($attr->getElem(),$attr->getAssoc()).'-');
+					}
 				}
-			} else { $params[] = PHP::attribute($element,$association); }
+			} else {
+				if ($attrsIds[0]->getElem() instanceof Object) {
+					$params[] = PHP::name_class($attrsIds[0]->getElem()).'::'.PHP::method_load().'('.PHP::attribute(Variable::var_pdo()).','.PHP::attribute($element,$association).')';
+				} else {
+					$params[] = PHP::attribute($element,$association);
+				}
+			}
 			
 			// Load and return object
 			$string .= nl('return '.PHP::name_class($element).'::'.PHP::method_load().'('.PHP::attribute(Variable::var_pdo()).','.implode(',',$params).','.PHP::name_parameter($lazy_load_enable).');',$nb_indents+1);

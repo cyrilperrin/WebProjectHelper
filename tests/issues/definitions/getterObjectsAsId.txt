@@ -1,0 +1,6 @@
+[a_issue2]
+[b_issue2:#a_issue2]
+[c_issue2]
+[d_issue2]
+[e_issue2:#c_issue2,#d_issue2]
+[f_issue2:b_issue2,e_issue2]

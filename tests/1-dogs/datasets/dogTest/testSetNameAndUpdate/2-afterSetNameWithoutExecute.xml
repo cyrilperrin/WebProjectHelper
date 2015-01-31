@@ -1,9 +1,0 @@
-<?xml version="1.0" ?>
-<dataset>
-    <table name="dog">
-        <column>name</column>
-        <row><value>Bill2</value></row>
-        <row><value>Droopy2</value></row>
-        <row><value>Milou2</value></row>
-    </table>
-</dataset>

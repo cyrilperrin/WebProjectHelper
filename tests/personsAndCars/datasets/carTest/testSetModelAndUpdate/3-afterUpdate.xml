@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<dataset>
+    <table name="car">
+        <column>model</column>
+        <column>brand</column>
+        <row>
+        	<value>Vanquish3</value>
+        	<value>Aston Martin</value>
+        </row>
+        <row>
+        	<value>Esprit3</value>
+        	<value>Lotus</value>
+        </row>
+        <row>
+        	<value>Fastback3</value>
+        	<value>Mustang</value>
+        </row>
+        <row>
+        	<value>Ford Torino3</value>
+        	<value>Ford</value>
+        </row>
+    </table>
+</dataset>
