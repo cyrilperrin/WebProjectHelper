@@ -1,7 +1,11 @@
-(major release).(minor release).(bugfix)
+(major release).(minor release).(issuefix)
+
+1.7.4 (31/01/2015) :
+- correct a issue when loading object in case of objects used as id in get*() function
+- correct a issue when generating reload() function in case of multiple objects used as id
 
 1.7.3 (21/04/2014) :
-- correct a bug when an Object is used as ID in exists() and count() functions
+- correct a issue when an Object is used as ID in exists() and count() functions
 
 1.7.2 (29/01/2014) :
 - do not use boolval()
@@ -11,52 +15,52 @@
 - improve generated PHP files Zend Coding standard compliancy
 
 1.7.0 (27/09/2013) :
-- add reload() method
-- add get*Id() method
-- add set*ById() method
-- add addListOf*() method
-- add removeListOf*() method
-- add removeAll*() method
-- add $lazyload parameter to get*() methods
+- add reload() function
+- add get*Id() function
+- add set*ById() function
+- add addListOf*() function
+- add removeListOf*() function
+- add removeAll*() function
+- add $lazyload parameter to get*() functions
 - add PHPUnit tests
 - correct *Base classes phpdoc
 - valid HTML5
 
 1.6.1 (12/06/2013) :
-- improve memory usage in fetch() method
-- correct a bug in fetch() method for date/datetime fields
+- improve memory usage in fetch() function
+- correct a issue in fetch() function for date/datetime fields
 
 1.6.0 (15/04/2013) :
 - add "Prefix for PHP classes" option
-- correct a bug in MySQL CREATE script for association tables
+- correct a issue in MySQL CREATE script for association tables
 
 1.5.1 (16/09/2012) :
-- correct a bug on generation options
+- correct a issue on generation options
 
 1.5.0 (29/08/2012) :
 - use MVC library
 
 1.4.2 (15/06/2012) :
-- correct a bug in update() method
+- correct a issue in update() function
 
 1.4.1 (24/05/2012) :
-- correct a bug on "Put fieldnames into base PHP classes" and "Generate only base PHP classes" options 
+- correct a issue on "Put fieldnames into base PHP classes" and "Generate only base PHP classes" options 
 
 1.4.0 (23/05/2012) :
 - add "Put fieldnames into base PHP classes" option
 - add "Generate only base PHP classes" option
 
 1.2.0 (05/04/2012) :
-- add a fetchAll() method
+- add a fetchAll() function
 
 1.1.0 (03/04/2012) :
-- call _select() method from selectBy*() methods
-- correct a bug in load() method 
+- call _select() function from selectBy*() functions
+- correct a issue in load() function 
 
 1.0.1 (24/10/2011) :
-- add missing space character before WHERE instruction in _select() method
+- add missing space character before WHERE instruction in _select() function
 - correct spelling mistakes in french translation
-- correct a bug in delete() method
+- correct a issue in delete() function
 - correct DECIMAL type in MySQL script
 - correct getter name for generated id
 - customizable fieldnames
