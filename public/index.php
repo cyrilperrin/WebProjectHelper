@@ -21,7 +21,7 @@ require('translation.php');
 // Get abstract controller
 require(ROOT_DIR.'app/controllers/abstract.php');
 
-// Définir les routes
+// Define routes
 Request::addRoute(new Route(
 	array(
 		':controller/:action:parameters',
