@@ -921,6 +921,9 @@ class PHP {
 			case Scalar::T_DATE :
 				$value = $test_null.'date(\'Y-m-d\','.$value.')';
 				break;
+			case Scalar::T_BOOL :
+			    $value = $test_null.$value.' ? 1 : 0';
+			    break;
 		}
 		return $value;
 	}
