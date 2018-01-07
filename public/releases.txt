@@ -1,5 +1,8 @@
 (major release).(minor release).(issuefix)
 
+1.7.5 (07/01/2018) :
+- fix boolean update
+
 1.7.4 (31/01/2015) :
 - correct a issue when loading object in case of objects used as id in get*() function
 - correct a issue when generating reload() function in case of multiple objects used as id
